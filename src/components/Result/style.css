@@ -1,0 +1,12 @@
+div#flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div#flex p {
+  margin: 0 2.5px;
+}
+div#linha {
+  border-bottom: 1px solid #000;
+  /* width: 140px */
+}

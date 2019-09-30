@@ -2,10 +2,24 @@ import React from 'react';
 
 import { connect } from 'react-redux'
 
-const Result = ({ result }) => (
-  <div>
-    Fluxo de Calor: <input name='result' value={result} readOnly={true} />
-  </div>
-)
+import './style.css'
 
-export default connect(state => ({ result: state.result }))(Result)
+const Result = ({ state }) => {
+  const { result, constante, area, fQuente, fFrio, largura } = state
+
+  return (
+    <div>
+      <div id='flex'>
+        
+        <div id='linha' style={{ width: 'auto' }}>
+          <p id='first'>{constante} * {area} ({fQuente} - {fFrio})</p>
+        </div>
+        <p>{largura}</p>
+
+      </div>
+      Fluxo de Calor Φ: <p style={{display: 'inline'}}>{result}</p> 
+    </div>
+  )
+}
+
+export default connect(state => ({ state }))(Result)

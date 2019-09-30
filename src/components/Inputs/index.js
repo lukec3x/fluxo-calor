@@ -8,7 +8,6 @@ function calc() {
   // console.log(document.getElementById(id).value)
 
   const constante = parseFloat(document.getElementById('constante').value)
-  console.log(isNaN(constante))
   const area = parseFloat(document.getElementById('area').value)
   const fQuente = parseFloat(document.getElementById('fQuente').value)
   const fFrio = parseFloat(document.getElementById('fFrio').value)
@@ -22,7 +21,12 @@ function calc() {
 
   return {
     type: 'CALCULA',
-    result: constante * area * ( fQuente - fFrio ) / largura
+    result: constante * area * ( fQuente - fFrio ) / largura,
+    constante, 
+    area, 
+    fQuente, 
+    fFrio, 
+    largura,
   }
 }
 
@@ -33,8 +37,8 @@ const Inputs = ({ dispatch }) => (
     Fonte Quente: <input id='fQuente' onChange={() => dispatch(calc())} /> <br />
     Fonte Frio: <input id='fFrio' onChange={() => dispatch(calc())} /> <br />
     Largura: <input id='largura' onChange={() => dispatch(calc())} /> <br />
-    Constante: <select id="constante" onChange={() => dispatch(calc())}>
-      <option selected value="385">Cobre</option>
+    Constante: <select id="constante" defaultValue={'385'} onChange={() => dispatch(calc())}>
+      <option value="385">Cobre</option>
       <option value="0.8">Vidro Comum</option>
     </select>
   </div>
