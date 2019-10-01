@@ -1,0 +1,46 @@
+div {
+  width: 100%;
+}
+
+div#obj {
+  align-self: center;
+
+  padding-top: 20px;
+
+  height: 300px;
+
+  display: grid;
+
+  grid-template-rows: 142px;
+  grid-template-columns: 102px 92px 102px;
+  grid-template-areas: "p1 p2 p3";
+}
+
+div.beq {
+  border: 1px solid #000;
+  border-top: none;
+  align-items: flex-end;
+  display: flex;
+  height: 140px;
+  width: 100px;
+  border-radius: 5px 5px 0 0;
+}
+
+div#fq div {
+  grid-area: p1;
+  background-color: aquamarine;
+}
+
+div#barra {
+  align-self: center;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  grid-area: p2;
+  height: 10px;
+  /* background-color: coral; */
+}
+
+div#ff div {
+  grid-area: p3;
+  background-color: blueviolet;
+}

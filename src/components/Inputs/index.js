@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { connect } from 'react-redux'
 
 import './style.css'
 
-function calc() { // passa o vlor do esdato desse component para o redux
+function calc() { // passa o valor do estado desse component para o redux
   const constante = parseFloat(document.getElementById('constante').value)
   const area = parseFloat(document.getElementById('area').value)
   const fQuente = parseFloat(document.getElementById('fQuente').value)

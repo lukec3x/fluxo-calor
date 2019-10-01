@@ -10,3 +10,7 @@ div#linha {
   border-bottom: 1px solid #000;
   /* width: 140px */
 }
+
+span {
+  font-size: 25pt;
+}

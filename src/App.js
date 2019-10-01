@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 
 import Inputs from './components/Inputs'
 import Result from './components/Result'
+import Objetos from './components/Objetos'
 
 import store from './store'
 
@@ -17,6 +18,7 @@ export default class App extends Component {
         <Provider store={store}>
           <Inputs />
           <Result />
+          <Objetos />
         </Provider>
       </div>
     )

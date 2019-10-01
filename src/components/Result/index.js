@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { connect } from 'react-redux'
 
 import './style.css'
@@ -17,7 +16,7 @@ const Result = ({ state }) => {
         <p>{largura}</p>
 
       </div>
-      Fluxo de Calor Φ: <p style={{display: 'inline'}}>{result}</p> 
+      <span>Φ</span> Calor: <p style={{display: 'inline'}}>{result}</p> 
     </div>
   )
 }
