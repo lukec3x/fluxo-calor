@@ -17,7 +17,7 @@ const Objetos = ({ state }) => {
   }
 
   var diamentro = (Math.pow(area/Math.PI, 0.5)) *2
-  console.log(diamentro)
+  // console.log(diamentro)
 
   return (
     <div id="obj" style={{ gridTemplateColumns: `102px ${largura}px 102px` }}>

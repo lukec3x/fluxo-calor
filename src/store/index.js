@@ -10,11 +10,25 @@ const ESTADO_INICIAL = {
 }
 
 function reducer(state = ESTADO_INICIAL, action) {
-  if (action.type === 'CALCULA') {
-    // console.log(state, action)
-    
-    const { result, constante, area, fQuente, fFrio, largura } = action
+  const { result, constante, area, fQuente, fFrio, largura } = action
 
+  if (action.type === 'CONSTANTE') {
+    return {...state, constante}
+
+  } else if (action.type === 'AREA') {
+    return {...state, area}
+
+  } else if (action.type === 'F_QUENTE') {
+    return {...state, fQuente}
+
+  } else if (action.type === 'F_FRIO') {
+    return {...state, fFrio}
+
+  } else if (action.type === 'LARGURA') {
+    return {...state, largura}
+
+  } else if (action.type === 'CALCULA') {
+    // console.log(state, action)
     return { result, constante, area, fQuente, fFrio, largura }
   }
 
