@@ -86,7 +86,7 @@ const Inputs = ({ dispatch }) => (
     Área: <input type='number' id='area' onChange={() => dispatch(calc('area'))} /> <br />
     Fonte Quente: <input type='number' id='fQuente' onChange={() => dispatch(calc('quente'))} /> <br />
     Fonte Frio: <input type='number' id='fFrio' onChange={() => dispatch(calc('frio'))} /> <br />
-    Largura: <input type='number' id='largura' onChange={() => dispatch(calc('largura'))} /> <br />
+    Comprimento: <input type='number' id='largura' onChange={() => dispatch(calc('largura'))} /> <br />
   </div>
 )
 
