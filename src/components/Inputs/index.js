@@ -83,10 +83,10 @@ const Inputs = ({ dispatch }) => (
       <option value="385">Cobre</option>
       <option value="0.8">Vidro Comum</option>
     </select> <br/>
-    Área: <input id='area' onChange={() => dispatch(calc('area'))} /> <br />
-    Fonte Quente: <input id='fQuente' onChange={() => dispatch(calc('quente'))} /> <br />
-    Fonte Frio: <input id='fFrio' onChange={() => dispatch(calc('frio'))} /> <br />
-    Largura: <input id='largura' onChange={() => dispatch(calc('largura'))} /> <br />
+    Área: <input type='number' id='area' onChange={() => dispatch(calc('area'))} /> <br />
+    Fonte Quente: <input type='number' id='fQuente' onChange={() => dispatch(calc('quente'))} /> <br />
+    Fonte Frio: <input type='number' id='fFrio' onChange={() => dispatch(calc('frio'))} /> <br />
+    Largura: <input type='number' id='largura' onChange={() => dispatch(calc('largura'))} /> <br />
   </div>
 )
 

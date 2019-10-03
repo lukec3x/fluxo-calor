@@ -9,7 +9,7 @@ import store from './store'
 
 export default class App extends Component {
   componentDidMount() {
-    document.getElementById('area').focus()
+    document.getElementById('constante').focus()
   }
 
   render () {

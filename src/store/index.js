@@ -7,10 +7,12 @@ const ESTADO_INICIAL = {
   fFrio: 'Tf',
   largura: 'L',
   result: 0,
+  
+  checado: true,
 }
 
 function reducer(state = ESTADO_INICIAL, action) {
-  const { result, constante, area, fQuente, fFrio, largura } = action
+  const { result, constante, area, fQuente, fFrio, largura, checado } = action
 
   if (action.type === 'CONSTANTE') {
     return {...state, constante}
@@ -29,7 +31,11 @@ function reducer(state = ESTADO_INICIAL, action) {
 
   } else if (action.type === 'CALCULA') {
     // console.log(state, action)
-    return { result, constante, area, fQuente, fFrio, largura }
+    return { ...state, result, constante, area, fQuente, fFrio, largura }
+
+  } else if (action.type === 'CHECAR') {
+    // console.log(checado)
+    return {...state, checado}
   }
 
   // console.log(state, action)  
