@@ -8,9 +8,9 @@ import './style.css'
 //   const area = parseFloat(document.getElementById('area').value)
 //   const fQuente = parseFloat(document.getElementById('fQuente').value)
 //   const fFrio = parseFloat(document.getElementById('fFrio').value)
-//   const largura = parseFloat(document.getElementById('largura').value)
+//   const comprimento = parseFloat(document.getElementById('comprimento').value)
 
-//   if (isNaN(constante) || isNaN(area) || isNaN(fQuente) || isNaN(fFrio) || isNaN(largura)) {
+//   if (isNaN(constante) || isNaN(area) || isNaN(fQuente) || isNaN(fFrio) || isNaN(comprimento)) {
 //     return {
 //       type: '',
 //     }
@@ -18,12 +18,12 @@ import './style.css'
 
 //   return {
 //     type: 'CALCULA',
-//     result: constante * area * ( fQuente - fFrio ) / largura,
+//     result: constante * area * ( fQuente - fFrio ) / comprimento,
 //     constante, 
 //     area, 
 //     fQuente, 
 //     fFrio, 
-//     largura,
+//     comprimento,
 //   }
 // }
 
@@ -33,9 +33,9 @@ function calc(tipo) { // passa o valor do estado desse component para o redux
   const area = parseFloat(document.getElementById('area').value)
   const fQuente = parseFloat(document.getElementById('fQuente').value)
   const fFrio = parseFloat(document.getElementById('fFrio').value)
-  const largura = parseFloat(document.getElementById('largura').value)
+  const comprimento = parseFloat(document.getElementById('comprimento').value)
 
-  if (isNaN(constante) || isNaN(area) || isNaN(fQuente) || isNaN(fFrio) || isNaN(largura)) {
+  if (isNaN(constante) || isNaN(area) || isNaN(fQuente) || isNaN(fFrio) || isNaN(comprimento)) {
     if (tipo === 'const') {
       return {
         type: 'CONSTANTE',
@@ -56,22 +56,22 @@ function calc(tipo) { // passa o valor do estado desse component para o redux
         type: 'F_FRIO',
         fFrio,
       }
-    } else if (tipo === 'largura') {
+    } else if (tipo === 'comprimento') {
       return {
-        type: 'LARGURA',
-        largura,
+        type: 'comprimento',
+        comprimento,
       }
     }
   }
 
   return {
     type: 'CALCULA',
-    result: constante * area * ( fQuente - fFrio ) / largura,
+    result: constante * area * ( fQuente - fFrio ) / comprimento,
     constante, 
     area, 
     fQuente, 
     fFrio, 
-    largura,
+    comprimento,
   }
 }
 
@@ -86,7 +86,7 @@ const Inputs = ({ dispatch }) => (
     Área: <input type='number' id='area' onChange={() => dispatch(calc('area'))} /> <br />
     Fonte Quente: <input type='number' id='fQuente' onChange={() => dispatch(calc('quente'))} /> <br />
     Fonte Frio: <input type='number' id='fFrio' onChange={() => dispatch(calc('frio'))} /> <br />
-    Comprimento: <input type='number' id='largura' onChange={() => dispatch(calc('largura'))} /> <br />
+    Comprimento: <input type='number' id='comprimento' onChange={() => dispatch(calc('comprimento'))} /> <br />
   </div>
 )
 

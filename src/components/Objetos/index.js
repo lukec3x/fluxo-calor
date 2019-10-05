@@ -5,7 +5,7 @@ import './style.css'
 
 const Objetos = ({ state }) => {
 
-  const { fQuente, fFrio, constante, largura, area } = state
+  const { fQuente, fFrio, constante, comprimento, area } = state
 
   var cor
   if (constante === 385) {
@@ -20,11 +20,11 @@ const Objetos = ({ state }) => {
   // console.log(diamentro)
 
   return (
-    <div id="obj" style={{ gridTemplateColumns: `102px ${largura}px 102px` }}>
+    <div id="obj" style={{ gridTemplateColumns: `102px ${comprimento}px 102px` }}>
     <div className='beq' id='fq'>
       <div style={{ height: fQuente + '%' }}></div>
     </div>
-    <div id="barra" style={{ backgroundColor: cor, width: largura +'px', height: diamentro +'px' }}></div>
+    <div id="barra" style={{ backgroundColor: cor, width: comprimento +'px', height: diamentro +'px' }}></div>
     <div className='beq' id="ff">
     <div style={{ height: fFrio + '%' }}></div>
     </div>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import './style.css'
 
-function checar() {
+function checar() {  // verifica o estdo do checkbox
   const chbx = document.getElementById('flutuante')
 
   if (chbx.checked) {
@@ -20,7 +20,7 @@ function checar() {
 }
 
 const Result = ({ state, dispatch }) => {
-  let { result, constante, area, fQuente, fFrio, largura, checado } = state
+  let { result, constante, area, fQuente, fFrio, comprimento, checado } = state
 
   if (checado) {
     result = result.toFixed(2)
@@ -33,7 +33,7 @@ const Result = ({ state, dispatch }) => {
         <div id='linha' style={{ width: 'auto' }}>
           <p id='first'>{constante} * {area} ({fQuente} - {fFrio})</p>
         </div>
-        <p>{largura}</p>
+        <p>{comprimento}</p>
 
       </div>
       <span>Φ</span> Calor: <p style={{display: 'inline'}}>{result}</p> 
